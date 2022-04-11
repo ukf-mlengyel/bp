@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DumpViewActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/dumpview_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_baseline_image_24" />
+
+            <TextView
+                android:id="@+id/dumpview_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/empty"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dumpview_title_sub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/empty"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/dumpview_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/empty"
+                android:textAlignment="center" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/padding_sm"
+                android:background="@color/list_divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/padding_sm"
+                android:layout_marginEnd="@dimen/padding_sm"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/dumpview_like_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="like"
+                    android:text="@string/likebutton_empty"
+                    app:shapeAppearanceOverlay="@style/PillShape" />
+
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_sm"
+                    android:layout_weight="1"
+                    android:onClick="openDumpInMaps"
+                    android:text="@string/open_in_maps"
+                    app:shapeAppearanceOverlay="@style/PillShape" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dumpview_admin_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/padding_sm"
+                android:layout_marginEnd="@dimen/padding_sm"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="editDescription"
+                    android:text="@string/edit_description"
+                    app:icon="@drawable/ic_baseline_edit_24"
+                    app:iconGravity="textStart"
+                    app:shapeAppearanceOverlay="@style/PillShape" />
+
+                <Button
+                    android:id="@+id/plan_cleanup_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="planCleanup"
+                    android:text="@string/plan_cleanup"
+                    app:icon="@drawable/ic_baseline_edit_calendar_24"
+                    app:iconGravity="textStart"
+                    app:shapeAppearanceOverlay="@style/PillShape" />
+
+                <Button
+                    android:id="@+id/set_cleaned_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="setCleaned"
+                    android:text="@string/set_cleaned"
+                    app:icon="@drawable/ic_baseline_check_circle_24"
+                    app:iconGravity="textStart"
+                    app:shapeAppearanceOverlay="@style/PillShape" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="deleteDump"
+                    android:text="@string/deletebutton_full"
+                    app:icon="@drawable/ic_baseline_delete_forever_24"
+                    app:iconGravity="textStart"
+                    app:shapeAppearanceOverlay="@style/PillShape" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/list_divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:onClick="showProfile">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/dumpview_user_img"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@android:color/transparent"
+                    android:elevation="4dp"
+                    android:padding="@dimen/padding_sm"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_account_box_24"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/dumpview_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/empty"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dumpview_add_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/empty" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/dumpview_description_separator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/list_divider" />
+
+            <TextView
+                android:id="@+id/dumpview_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_sm"
+                android:text="@string/empty" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/list_divider" />
+
+            <!-- cleanup event (hidden) -->
+            <LinearLayout
+                android:id="@+id/cleanup_event_section"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/padding_sm"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/cleanup_event"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dumpview_cleanup_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/empty"
+                        android:textSize="16sp"
+                        android:textStyle="italic" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/toAttendList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/to_attend_title" />
+
+                <TextView
+                    android:id="@+id/attendantsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/attendees_title" />
+
+                <Button
+                    android:id="@+id/dumpview_toggleattend_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="toggleAttendance"
+                    android:text="@string/want_to_attend_btn"
+                    app:shapeAppearanceOverlay="@style/PillShape" />
+
+                <Button
+                    android:id="@+id/dumpview_attend_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="attendCleanup"
+                    android:text="@string/attend_btn"
+                    android:visibility="gone"
+                    app:shapeAppearanceOverlay="@style/PillShape" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/cleanup_event_separator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/list_divider"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_sm"
+                    android:layout_weight="1"
+                    android:text="@string/comments"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/dumpview_commentbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_sm"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:hint="@string/write_comment"
+                    android:inputType="textMultiLine"
+                    android:maxLength="300" />
+
+                <Button
+                    android:id="@+id/button9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_sm"
+                    android:layout_weight="1"
+                    android:onClick="postComment"
+                    android:text="@string/add_comment"
+                    app:shapeAppearanceOverlay="@style/PillShape" />
+
+                <com.mirzi.binme.View.NonScrollListView
+                    android:id="@+id/dumpview_comments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/backbutton"
+        android:layout_width="@dimen/actionbar_height"
+        android:layout_height="@dimen/actionbar_height"
+        android:background="@drawable/navigation_background"
+        android:elevation="4dp"
+        android:layout_margin="@dimen/padding_sm"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="back"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

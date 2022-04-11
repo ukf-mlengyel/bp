@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/mainmenu_edit_button"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_baseline_edit_24"
+        android:title="@string/edit_profile" />
+
+    <item
+        android:id="@+id/mainmenu_refresh_button"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_baseline_refresh_24"
+        android:title="@string/refresh" />
+</menu>

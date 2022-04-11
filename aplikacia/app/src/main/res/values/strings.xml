@@ -1,0 +1,211 @@
+<resources>
+    <!-- mapbox -->
+    <string name="mapbox_access_token">pk.eyJ1IjoibWlyemkiLCJhIjoiY2t2djFmemd4MTcyOTJwbTlpd2tsb3dtMiJ9.KrkpLWMACeL0d_SRk1UjZQ</string>
+
+    <!-- version -->
+    <string name="app_version">v1.2</string>
+
+    <!-- generic -->
+    <string name="app_name">bin me!</string>
+    <string name="error">Chyba</string>
+    <string name="retry">Skúsiť Znova</string>
+    <string name="refresh">Obnoviť</string>
+    <string name="filter">Filter</string>
+    <string name="filter_confirm">Filtrovať</string>
+    <string name="connect_error">Nastala chyba pri pripájaní na server, skúste to neskôr.</string>
+    <string name="write_comment">Napíšte komentár…</string>
+    <string name="edit_profile">Upraviť profil</string>
+    <string name="logout_dialog">Odhlásiť sa?</string>
+    <string name="logout_success">Boli ste odhlásený.</string>
+    <string name="loading">Načítavanie…</string>
+
+    <!-- preload -->
+    <string name="preload_connect">Pripájanie…</string>
+    <string name="preload_error">Aplikácia je dočasne nedostupná. Skúste to neskôr.</string>
+
+    <!-- index -->
+    <string name="index_text">
+        Bin me je mobilná a webová aplikácia ktorá uľahčuje nahlasovanie čiernych skládok.\n\n
+        Po prihlásení a overení účtu máte možnosť:\n
+         - Hľadať a pridávať nelegálne skládky vo vašom okolí\n
+         - Plánovať skupinové čistenie\n
+         - Vyhľadávať odpadkové koše, kontajnery, zberné dvory\n
+         - Získavať body za plnenie aktivít\n\n
+        Ako aplikácia funguje?\n
+        1. Po prihlásení do aplikácie sa zobrazí mapa vášho okolia\n
+        2. Na základe umiestnenia (GPS) dokážete do mapy pridať zistenú skládku\n
+        3. Otvorí sa diskusia k danej skládke\n
+        4. Naplánuje sa čistiaca akcia, ktorej sa zúčastní skupina ľudí\n\n
+        Za akcie v aplikácii dostáva používateľ body:\n
+         - Pridanie skládky alebo koša\n
+         - Účasť na čistiacej akcii\n
+         - Získanie likov na príspevky a komentáre\n
+    </string>
+
+    <!-- login / register -->
+    <string name="login_title">Prihlásiť sa</string>
+    <string name="register_title">Vytvoriť účet</string>
+
+    <string name="register_requirements_nick">Požiadavky na meno</string>
+    <string name="register_requirements_pass">Požiadavky na heslo</string>
+    <string name="register_requirements_nick_txt">
+        Povolené sú ibá malé a veľké písmená bez diakritiky a čísla\nAspoň 4 znaky\nNajviac 24 znakov\n
+    </string>
+    <string name="register_requirements_pass_txt">
+        Minimálna dĺžka je 8 znakov\nMaximálna dĺžka je 32 znakov\n
+    </string>
+
+    <string name="msg_creating_account">Prebieha vytváranie účtu…</string>
+
+    <string name="login_btn">Prihlásiť sa</string>
+    <string name="register_btn">Vytvoriť účet</string>
+
+    <string name="login_nick">Meno</string>
+    <string name="login_pass">Heslo</string>
+
+    <!-- nav -->
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_dumps">Skládky</string>
+    <string name="title_bins">Koše</string>
+    <string name="title_menu">Menu</string>
+
+    <!-- menu -->
+    <string name="menu_summary">Členom od %s\n%s skládok\n%s košov</string>
+    <string name="menu_info_refreshed">Informácie boli obnovené.</string>
+
+    <!-- map -->
+    <string name="location_request">Pre vyhľadávanie skládok je potrebné povoliť GPS.</string>
+    <string name="location_request_denied">Odmietli ste požiadavku, aplikácia nebude fungovať.</string>
+    <string name="location_find_error">Nevieme nájsť vaše umiestnenie, skúste to neskôr.</string>
+    <string name="refresh_done">Dáta boli obnovené.</string>
+
+    <!-- profile -->
+    <string name="recent_dumps">Naposledy pridané skládky</string>
+    <string name="recent_bins">Naposledy pridané koše</string>
+    <string name="dumps_count">Skládok: %d</string>
+    <string name="bins_count">Košov: %d</string>
+    <string name="member_since">Členom od %s</string>
+    <string name="view_all">Zobraziť všetky</string>
+    <string name="no_dumps">Nemáte žiadne skládky.</string>
+    <string name="no_bins">Nemáte žiadne koše.</string>
+    <string name="no_cleanups">Nie ste prihlásený na žiadne akcie.</string>
+
+    <string name="dump_date_prefix">Pridaná&#160;</string>
+    <string name="bin_date_prefix">Pridaný&#160;</string>
+    <string name="cleanup_date_prefix">Čistenie začne&#160;</string>
+
+    <!-- add -->
+    <string name="add_dump">Pridať skládku</string>
+    <string name="add_bin">Pridať kôš</string>
+    <string name="take_photo">Odfotiť</string>
+    <string name="select_image">Z galérie</string>
+    <string name="enter_description">Zadajte popis (nepovinné)</string>
+    <string name="image_not_selected">Nezvolili ste fotografiu.</string>
+    <string name="types_not_selected">Nezvolili ste typy.</string>
+    <string name="need_file_access">Pre pokračovanie povoľte prístup k súborom.</string>
+
+    <string name="bin_added">Kôš bol pridaný.</string>
+    <string name="dump_added">Skládka bola pridaná.</string>
+    <string name="bin_removed">Kôš bol odstránený.</string>
+    <string name="dump_removed">Skládka bola odstránená.</string>
+    <string name="add_error">Pri pridávaní nastala chyba.</string>
+
+    <string name="status_change_dialog">Zmeniť stav skládky?</string>
+    <string name="status_changed">Stav skládky bol zmenený.</string>
+
+    <string name="user_doesnt_exist">Používateľ neexistuje.</string>
+    <string name="dump_doesnt_exist">Skládka neexistuje.</string>
+    <string name="bin_doesnt_exist">Kôš neexistuje.</string>
+
+    <!-- progress -->
+    <string name="progress_add_dump">Prebieha pridávanie skládky…</string>
+    <string name="progress_add_bin">Prebieha pridávanie koša…</string>
+
+    <!-- view -->
+    <string name="open_in_maps">Otvoriť v Google Maps</string>
+    <string name="cleanup_event">Čistiaca akcia</string>
+    <string name="to_attend_title">Zúčastniť sa chce (%d):\n%s</string>
+    <string name="attendees_title">Zúčastnilo sa (%d):\n%s</string>
+
+    <string name="edit_description">Upraviť popis</string>
+    <string name="plan_cleanup">Naplánovať čistenie</string>
+    <string name="plan_cleanup_msg">Naplánovať čistenie na\n%s, %s?</string>
+    <string name="plan_cleanup_success">Čistenie bolo naplánované.</string>
+    <string name="edit_types">Upraviť typy</string>
+    <string name="set_cleaned">Označiť ako vyčistené</string>
+    <string name="set_not_cleaned">Označiť ako nevyčistené</string>
+
+    <string name="description_edited">Popis bol upravený.</string>
+    <string name="types_edited">Typy boli upravené.</string>
+
+    <string name="description">Popis</string>
+    <string name="photo">Fotografia</string>
+    <string name="types">Typy košov</string>
+    <string name="comments">Komentáre</string>
+
+    <string name="likebutton">&#x2764; %d</string>
+    <string name="likebutton_disabled">&#x1F90D; %d</string>
+    <string name="likebutton_empty">&#x1F90D;</string>
+
+    <string name="deletebutton">&#x274c;</string>
+    <string name="deletebutton_full">Odstrániť</string>
+    <string name="delete_comment_confirm">Chcete odstrániť tento komentár?</string>
+    <string name="delete_dump_confirm">Chcete odstrániť túto skládku?</string>
+    <string name="delete_bin_confirm">Chcete odstrániť tento kôš?</string>
+
+    <string name="yes">Ano</string>
+    <string name="no">Nie</string>
+    <string name="confirm">Potvrdiť</string>
+    <string name="cancel">Zrušiť</string>
+
+    <string name="dump_state_0">&#x1F534; Nevyčistená</string>
+    <string name="dump_state_1">&#x1F7E2; Naplánované čistenie</string>
+    <string name="dump_state_2">&#x1F535; Čistenie prebieha</string>
+    <string name="dump_state_3">&#x26AA; Vyčistená</string>
+
+    <string name="bin_type_1">&#x26AA; Komunál</string>
+    <string name="bin_type_2">&#x1F7E1; Plast</string>
+    <string name="bin_type_4">&#x1F535; Papier</string>
+    <string name="bin_type_8">&#x1F7E2; Sklo</string>
+    <string name="bin_type_16">&#x1F7E3; Kovy</string>
+    <string name="bin_type_32">&#x1F7E4; Bio</string>
+    <string name="bin_type_64">&#x1F534; Elektro</string>
+    <string name="bin_type_128">&#x26AB; Zberný dvor</string>
+
+    <string name="bin_type_icon_1">&#x26AA;</string>
+    <string name="bin_type_icon_2">&#x1F7E1;</string>
+    <string name="bin_type_icon_4">&#x1F535;</string>
+    <string name="bin_type_icon_8">&#x1F7E2;</string>
+    <string name="bin_type_icon_16">&#x1F7E3;</string>
+    <string name="bin_type_icon_32">&#x1F7E4;</string>
+    <string name="bin_type_icon_64">&#x1F534;</string>
+    <string name="bin_type_icon_128">&#x26AB;</string>
+
+    <!-- activity titles -->
+    <string name="dumplist_title">Skládky</string>
+    <string name="binlist_title">Koše</string>
+    <string name="cleanuplist_title">Čistiace akcie</string>
+    <string name="userlist_title">Používatelia</string>
+    <string name="profile_title">Profil</string>
+    <string name="dumpview_title">Skládka</string>
+
+    <string name="too_many_requests">"Zasielate požiadavky príliš často. Skúste to neskôr."</string>
+    <string name="add_comment">Pridať komentár</string>
+
+    <string name="profile_picture">Profilová fotka</string>
+    <string name="save">Uložiť</string>
+
+    <string name="want_to_attend_btn">Chcem sa zúčastniť</string>
+    <string name="dont_want_to_attend_btn">Nechcem sa zúčastniť</string>
+    <string name="attend_btn">Potvrdiť účašť</string>
+
+    <string name="attend_message">Zúčastnili ste sa pri čistení tejto skládky, ďakujeme za vašu pomoc! (100 bodov)</string>
+
+    <string name="empty">-</string>
+
+    <item name="adapterposition" type="id" />
+    <item name="commentid" type="id" />
+    <item name="id" type="id" />
+    <item name="isliked" type="id" />
+    <item name="likecount" type="id" />
+</resources>

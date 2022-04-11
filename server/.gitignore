@@ -1,0 +1,18 @@
+# phpstorm temp files
+.idea/
+
+# user images except default
+images/user/*
+!images/user/0.jpg
+images/user_thumb/*
+!images/user_thumb/0.jpg
+images/dump/*
+images/dump_thumb/*
+images/bin/*
+images/bin_thumb/*
+
+# test php file
+test.php
+
+# gitkeep
+!.gitkeep

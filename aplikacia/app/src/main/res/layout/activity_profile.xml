@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bm_primary"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/default_view_margin_top"
+                android:elevation="4dp">
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/profile_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="fitCenter"
+                    android:padding="@dimen/padding_sm"
+                    android:elevation="4dp"
+                    android:background="@android:color/transparent"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent"
+                    android:src="@drawable/ic_baseline_account_box_24" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingEnd="@dimen/padding_sm"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/profile_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/empty"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/profile_points"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/points_shape"
+                            android:layout_marginStart="@dimen/padding_sm"
+                            android:gravity="center"
+                            android:layout_marginTop="@dimen/padding_sm"
+                            android:layout_marginBottom="@dimen/padding_sm"
+                            android:paddingStart="@dimen/padding_lg"
+                            android:paddingEnd="@dimen/padding_lg"
+                            android:elevation="4dp"
+                            android:text="@string/empty"
+                            android:textColor="@color/bm_primary"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/profile_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="@string/empty" />
+
+                    <TextView
+                        android:id="@+id/profile_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="@string/empty" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/profile_section_dumps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/recent_dumps"
+                    android:textSize="24sp"
+                    android:layout_margin="@dimen/padding_sm"
+                    android:textStyle="bold" />
+
+                <com.mirzi.binme.View.NonScrollListView
+                    android:id="@+id/profile_dumplist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/light_gray"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_sm"
+                    app:shapeAppearanceOverlay="@style/PillShape"
+                    android:onClick="showDumpList"
+                    android:text="@string/view_all" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/profile_section_dumps_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/list_divider"/>
+
+            <LinearLayout
+                android:id="@+id/profile_section_bins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/recent_bins"
+                    android:textSize="24sp"
+                    android:layout_margin="@dimen/padding_sm"
+                    android:textStyle="bold" />
+
+                <com.mirzi.binme.View.NonScrollListView
+                    android:id="@+id/profile_binlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/light_gray"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_sm"
+                    app:shapeAppearanceOverlay="@style/PillShape"
+                    android:onClick="showBinList"
+                    android:text="@string/view_all" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/profile_section_bins_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/list_divider"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/comments"
+                    android:textSize="24sp"
+                    android:layout_margin="@dimen/padding_sm"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/profile_commentbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/write_comment"
+                    android:layout_margin="@dimen/padding_sm"
+                    android:ems="10"
+                    android:maxLength="300"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine" />
+
+                <Button
+                    android:id="@+id/button9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/padding_sm"
+                    app:shapeAppearanceOverlay="@style/PillShape"
+                    android:onClick="comment"
+                    android:text="@string/add_comment" />
+
+                <com.mirzi.binme.View.NonScrollListView
+                    android:id="@+id/profile_comments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include
+        android:id="@+id/home_toolbar"
+        layout="@layout/toolbar"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_height"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.mainmenu.MainMenuFragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bm_primary"
+        android:orientation="horizontal"
+        android:paddingTop="45dp"
+        android:elevation="4dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_menu_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
+            android:padding="@dimen/padding_sm"
+            android:elevation="4dp"
+            android:background="@android:color/transparent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent"
+            android:src="@drawable/ic_baseline_account_box_24" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/main_menu_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/empty"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/main_menu_points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/points_shape"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/padding_sm"
+                    android:layout_marginBottom="@dimen/padding_sm"
+                    android:paddingStart="@dimen/padding_lg"
+                    android:paddingEnd="@dimen/padding_lg"
+                    android:layout_marginStart="@dimen/padding_sm"
+                    android:elevation="4dp"
+                    android:text="@string/empty"
+                    android:textColor="@color/bm_primary"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/main_menu_subtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="" />
+        </LinearLayout>
+
+        <!--LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/main_menu_refresh_btn"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:tint="@color/white"
+                android:onClick="refresh"
+                android:src="@drawable/ic_baseline_refresh_24" />
+
+            <ImageButton
+                android:id="@+id/main_menu_edit_btn"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tint="@color/white"
+                android:layout_weight="1"
+                android:src="@drawable/ic_baseline_edit_24" />
+        </LinearLayout-->
+
+
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/main_menu_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

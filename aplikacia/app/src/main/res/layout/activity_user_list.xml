@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserListActivity">
+
+    <GridView
+        android:id="@+id/userList_gridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:columnWidth="100dp"
+        android:gravity="center"
+        android:horizontalSpacing="@dimen/padding_lg"
+        android:numColumns="auto_fit"
+        android:paddingTop="@dimen/home_view_margin_top"
+        android:paddingBottom="@dimen/home_view_margin_bottom"
+        android:verticalSpacing="@dimen/padding_lg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/home_toolbar"
+        layout="@layout/toolbar"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_height"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navbar_height"
+        android:layout_margin="5dp"
+        android:elevation="4dp"
+        android:background="@drawable/navigation_background"
+        app:layout_constraintBottom_toBottomOf="@+id/userList_gridView"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/userlist_backbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:iconGravity="start"
+            android:clickable="false"
+            android:visibility="invisible"
+            android:onClick="prevPage"
+            android:layout_marginStart="@dimen/padding_sm"
+            app:icon="@drawable/ic_baseline_keyboard_arrow_left_24" />
+
+        <TextView
+            android:id="@+id/userlist_page"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/userlist_forwardbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:iconGravity="end"
+            android:clickable="false"
+            android:visibility="invisible"
+            android:onClick="nextPage"
+            android:layout_marginEnd="@dimen/padding_sm"
+            app:icon="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
